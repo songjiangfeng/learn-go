@@ -1,0 +1,32 @@
+package main
+
+import "fmt"
+
+func main() {
+	m := make(map[string]int)
+	m["k1"] = 7
+	m["k2"] = 13
+	fmt.Println("map:", m)
+
+	// n := make(map[string]string)
+	// n["name"] = "sam"
+	// n["sex"] = "male"
+	// fmt.Println("map:", n)
+
+	v1 := m["k1"]
+	fmt.Println("v1:", v1)
+
+	fmt.Println("len", len(m))
+
+	delete(m, "k2")
+	fmt.Println("map:", m)
+
+	_, prs := m["k2"]
+	fmt.Println("prs", prs)
+
+	n := map[string]int{"foo": 1, "bra": 2}
+	fmt.Println("map:", n)
+	fmt.Println("foo:", n["foo"])
+	fmt.Println("bar:", n["bra"])
+
+}
